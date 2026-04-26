@@ -243,3 +243,33 @@ input,select,textarea { font-family:inherit; }
   .container{padding:0 1.5rem;}
   .section{padding:5rem 0;}
 }
+
+/* =====================================================
+   OFFICIAL BRAND ICONS — MARQUEE & SKILL TAGS
+   ===================================================== */
+.tech-badge {
+  display:inline-flex; align-items:center; gap:0.45rem;
+  font-family:var(--font-mono); font-size:0.78rem;
+  letter-spacing:0.06em; text-transform:uppercase;
+  color:var(--muted);
+}
+.tech-badge img {
+  width:16px; height:16px;
+  object-fit:contain; flex-shrink:0;
+  filter:brightness(1);
+}
+.sep { color:var(--gold); font-size:0.55rem; }
+
+.skill-tags span {
+  display:inline-flex; align-items:center; gap:0.4rem;
+}
+.skill-tags span img {
+  width:13px; height:13px; object-fit:contain; flex-shrink:0;
+}
+
+.service-tech span {
+  display:inline-flex; align-items:center; gap:0.3rem;
+}
+.service-tech span img {
+  width:11px; height:11px; object-fit:contain; flex-shrink:0;
+}
