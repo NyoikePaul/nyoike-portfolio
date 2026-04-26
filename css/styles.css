@@ -273,3 +273,39 @@ input,select,textarea { font-family:inherit; }
 .service-tech span img {
   width:11px; height:11px; object-fit:contain; flex-shrink:0;
 }
+
+/* ===== BRANDED MARQUEE BADGES ===== */
+.marquee-track { align-items: center; }
+.tbadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.85rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 100px;
+  background: rgba(255,255,255,0.03);
+  transition: border-color 0.2s, background 0.2s;
+}
+.tbadge:hover {
+  border-color: rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+}
+.tbadge img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.tbadge b {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.msep {
+  color: var(--gold);
+  font-size: 0.5rem;
+  flex-shrink: 0;
+}
