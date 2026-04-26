@@ -177,7 +177,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// ==================== REAL WORKING CONTACT FORM ====================
+
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      submitBtn.textContent = 'Failed to send – try again';
+      setTimeout(() => {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }, 3000);
+    }
+  });
+}
+
+// ==================== REAL WORKING CONTACT FORM (FINAL) ====================
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', async function(e) {
@@ -190,8 +202,8 @@ if (contactForm) {
 
     try {
       await emailjs.sendForm(
-        'service_nxvkyl',           // ← Your Service ID
-        'YOUR_TEMPLATE_ID_HERE',    // ← <<< REPLACE THIS WITH YOUR "Contact Us" TEMPLATE ID
+        'service_nxvkyl',                    // Service ID
+        '__ejs-test-mail-service__',         // Template ID
         contactForm
       );
 
@@ -208,7 +220,7 @@ if (contactForm) {
 
     } catch (error) {
       console.error('EmailJS error:', error);
-      submitBtn.textContent = 'Failed to send – try again';
+      submitBtn.textContent = 'Failed — try again';
       setTimeout(() => {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
