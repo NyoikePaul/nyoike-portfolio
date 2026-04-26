@@ -629,3 +629,16 @@ body:hover .cursor-follower { opacity: 1; }
   .container { padding: 0 1.5rem; }
   .section { padding: 5rem 0; }
 }
+
+/* Official Tech Logos */
+.tech-logo {
+  height: 28px;
+  width: auto;
+  margin: 0 1.2rem;
+  filter: grayscale(0%) brightness(1);
+  transition: all 0.3s ease;
+  vertical-align: middle;
+}
+.marquee-track:hover .tech-logo {
+  filter: brightness(1.15) drop-shadow(0 0 8px rgba(201, 168, 76, 0.6));
+}
