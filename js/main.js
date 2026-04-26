@@ -240,3 +240,39 @@ if (contactForm) {
     }
   });
 }
+
+// ==================== REAL WORKING CONTACT FORM ====================
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const submitBtn = contactForm.querySelector('button');
+    const originalText = submitBtn.textContent;
+
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    try {
+      await emailjs.sendForm('service_nxvkyl', '__ejs-test-mail-service__', contactForm);
+
+      submitBtn.innerHTML = '✓ Message Sent Successfully!';
+      submitBtn.style.backgroundColor = '#4ade80';
+
+      contactForm.reset();
+
+      setTimeout(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.style.backgroundColor = '';
+        submitBtn.disabled = false;
+      }, 4000);
+
+    } catch (error) {
+      console.error(error);
+      submitBtn.textContent = 'Failed — try again';
+      setTimeout(() => {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }, 3000);
+    }
+  });
+}
