@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paul Nyoike — Full-Stack Engineer & Digital Architect</title>
+  <meta name="description" content="Python Backend Engineer | Odoo ERP | FastAPI | React | Scalable APIs & Workflow Automation. Based in Nairobi, serving clients worldwide.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise"></div>
+
+  <!-- ======================== NAVIGATION ======================== -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="logo-mark">PN</span>
+      <span class="logo-text">Paul Nyoike</span>
+    </div>
+    <div class="nav-links">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#projects" class="nav-link">Work</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <a href="https://www.upwork.com/freelancers/~0117b7d1b005b4b7f8" target="_blank" class="nav-cta">Hire Me →</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mob-link">About</a>
+    <a href="#services" class="mob-link">Services</a>
+    <a href="#projects" class="mob-link">Work</a>
+    <a href="#contact" class="mob-link">Contact</a>
+    <a href="https://www.upwork.com/freelancers/~0117b7d1b005b4b7f8" target="_blank" class="mob-cta">Hire Me on Upwork →</a>
+  </div>
+
+  <!-- ======================== HERO ======================== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-lines"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">
+        <span class="status-dot"></span>
+        <span>Available for Projects · Nairobi, Kenya</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="line reveal-line" style="--delay:0.1s">Building Digital</span>
+        <span class="line italic reveal-line" style="--delay:0.25s">Infrastructure</span>
+        <span class="line reveal-line" style="--delay:0.4s">That Scales.</span>
+      </h1>
+
+      <p class="hero-sub reveal" style="--delay:0.55s">
+        Python · FastAPI · Odoo ERP · React · PostgreSQL · Docker
+      </p>
+
+      <div class="hero-actions reveal" style="--delay:0.7s">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-ghost">Let's Talk</a>
+      </div>
+    </div>
+
+    <div class="hero-stats reveal" style="--delay:0.85s">
+      <div class="stat">
+        <span class="stat-num">50+</span>
+        <span class="stat-label">Projects Delivered</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">5★</span>
+        <span class="stat-label">Upwork Rating</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">3+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ======================== MARQUEE ======================== -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <span>Python</span><span class="dot">✦</span>
+      <span>FastAPI</span><span class="dot">✦</span>
+      <span>Odoo ERP</span><span class="dot">✦</span>
+      <span>PostgreSQL</span><span class="dot">✦</span>
+      <span>React</span><span class="dot">✦</span>
+      <span>Docker</span><span class="dot">✦</span>
+      <span>Terraform</span><span class="dot">✦</span>
+      <span>REST APIs</span><span class="dot">✦</span>
+      <span>CI/CD</span><span class="dot">✦</span>
+      <span>M-Pesa</span><span class="dot">✦</span>
+      <span>Node.js</span><span class="dot">✦</span>
+      <span>Bash</span><span class="dot">✦</span>
+
+      <!-- Duplicate for seamless loop -->
+      <span>Python</span><span class="dot">✦</span>
+      <span>FastAPI</span><span class="dot">✦</span>
+      <span>Odoo ERP</span><span class="dot">✦</span>
+      <span>PostgreSQL</span><span class="dot">✦</span>
+      <span>React</span><span class="dot">✦</span>
+      <span>Docker</span><span class="dot">✦</span>
+      <span>Terraform</span><span class="dot">✦</span>
+      <span>REST APIs</span><span class="dot">✦</span>
+      <span>CI/CD</span><span class="dot">✦</span>
+      <span>M-Pesa</span><span class="dot">✦</span>
+      <span>Node.js</span><span class="dot">✦</span>
+      <span>Bash</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ======================== ABOUT ======================== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <div class="section-label reveal">About</div>
+          <h2 class="section-title reveal">
+            I engineer systems that <em>move</em> businesses forward.
+          </h2>
+          <div class="about-portrait reveal">
+            <div class="portrait-frame">
+              <div class="portrait-inner">
+                <span class="portrait-initials">PN</span>
+                <div class="portrait-accent"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <p class="about-text reveal">
+            I'm Paul Nyoike, a full-stack engineer and digital architect based in Nairobi, Kenya.
+            I specialize in building enterprise-grade backend systems, ERP customizations, and scalable APIs
+            that power real businesses — from startups to established enterprises across Africa and beyond.
+          </p>
+          <p class="about-text reveal">
+            With deep expertise in Python, FastAPI, and Odoo ERP, I've helped clients automate workflows,
+            integrate M-Pesa payments, provision cloud infrastructure, and ship production-ready software
+            that keeps working when it matters most.
+          </p>
+
+          <div class="about-skills reveal">
+            <div class="skill-group">
+              <div class="skill-label">Backend</div>
+              <div class="skill-tags">
+                <span>Python</span><span>FastAPI</span><span>Django</span><span>Node.js</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-label">ERP & Systems</div>
+              <div class="skill-tags">
+                <span>Odoo 16/17/18</span><span>M-Pesa API</span><span>Kenya L10n</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-label">Infrastructure</div>
+              <div class="skill-tags">
+                <span>Docker</span><span>Terraform</span><span>AWS</span><span>DigitalOcean</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-label">Frontend</div>
+              <div class="skill-tags">
+                <span>React</span><span>Next.js</span><span>TypeScript</span><span>Tailwind</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://www.upwork.com/freelancers/~0117b7d1b005b4b7f8" target="_blank" class="btn-primary reveal">
+            View Upwork Profile →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== SERVICES ======================== -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Services</div>
+        <h2 class="section-title">What I Build For You</h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal" style="--card-delay:0s">
+          <div class="service-num">01</div>
+          <div class="service-icon">⚡</div>
+          <h3 class="service-title">API Development</h3>
+          <p class="service-desc">Production-grade REST & GraphQL APIs with FastAPI or Django REST. Authentication, rate limiting, documentation, CI/CD — all included.</p>
+          <div class="service-tech"><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span></div>
+        </div>
+
+        <div class="service-card reveal" style="--card-delay:0.1s">
+          <div class="service-num">02</div>
+          <div class="service-icon">🏢</div>
+          <h3 class="service-title">Odoo ERP Customization</h3>
+          <p class="service-desc">Custom Odoo modules, Kenya localization, M-Pesa payment integration, real estate CRM, automated workflows for Odoo 16/17/18.</p>
+          <div class="service-tech"><span>Odoo</span><span>Python</span><span>M-Pesa</span></div>
+        </div>
+
+        <div class="service-card reveal" style="--card-delay:0.2s">
+          <div class="service-num">03</div>
+          <div class="service-icon">🌐</div>
+          <h3 class="service-title">Full-Stack Web Apps</h3>
+          <p class="service-desc">End-to-end web applications with React/Next.js frontend, Python backend, database design, and deployment to production environments.</p>
+          <div class="service-tech"><span>React</span><span>Next.js</span><span>Python</span></div>
+        </div>
+
+        <div class="service-card reveal" style="--card-delay:0.3s">
+          <div class="service-num">04</div>
+          <div class="service-icon">☁️</div>
+          <h3 class="service-title">Cloud & DevOps</h3>
+          <p class="service-desc">Infrastructure as code with Terraform, server hardening, monitoring setup, CI/CD pipelines, and automated deployments on AWS or DigitalOcean.</p>
+          <div class="service-tech"><span>Terraform</span><span>AWS</span><span>Bash</span></div>
+        </div>
+
+        <div class="service-card reveal" style="--card-delay:0.4s">
+          <div class="service-num">05</div>
+          <div class="service-icon">🔗</div>
+          <h3 class="service-title">Integrations & Automation</h3>
+          <p class="service-desc">Connect your tools — payment gateways, CRMs, third-party APIs. Automate repetitive workflows and save your team hundreds of hours.</p>
+          <div class="service-tech"><span>Webhooks</span><span>Celery</span><span>Redis</span></div>
+        </div>
+
+        <div class="service-card reveal service-card--highlight" style="--card-delay:0.5s">
+          <div class="service-num">06</div>
+          <div class="service-icon">📊</div>
+          <h3 class="service-title">Enterprise Dashboards</h3>
+          <p class="service-desc">Data-rich management dashboards with real-time analytics, role-based access, custom reporting, and export capabilities.</p>
+          <div class="service-tech"><span>React</span><span>TypeScript</span><span>Charts</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== PROJECTS ======================== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Selected Work</div>
+        <h2 class="section-title">Projects That Shipped</h2>
+      </div>
+
+      <div class="projects-list">
+
+        <article class="project-item reveal">
+          <div class="project-meta">
+            <span class="project-num">01</span>
+            <span class="project-year">2024</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Enterprise Core API</h3>
+            <p class="project-desc">Enterprise-grade FastAPI backend with automated cloud provisioning via Terraform, PostgreSQL integration, and a full CI/CD pipeline. Production-ready from day one.</p>
+            <div class="project-stack">
+              <span>FastAPI</span><span>PostgreSQL</span><span>Terraform</span><span>Docker</span><span>GitHub Actions</span>
+            </div>
+          </div>
+          <a href="https://github.com/NyoikePaul/enterprise-core-api" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </a>
+        </article>
+
+        <article class="project-item reveal">
+          <div class="project-meta">
+            <span class="project-num">02</span>
+            <span class="project-year">2024</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Odoo ERP Mastery Suite</h3>
+            <p class="project-desc">Kenya-localized Odoo modules including M-Pesa payment gateway, Real Estate CRM, and custom production workflows. Deployed on Odoo 16/17/18 for real clients.</p>
+            <div class="project-stack">
+              <span>Odoo 18</span><span>Python</span><span>M-Pesa API</span><span>Kenya L10n</span>
+            </div>
+          </div>
+          <a href="https://github.com/NyoikePaul/OdooERP" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </a>
+        </article>
+
+        <article class="project-item reveal">
+          <div class="project-meta">
+            <span class="project-num">03</span>
+            <span class="project-year">2024</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">FastAPI Product Catalog</h3>
+            <p class="project-desc">Secure REST API with API Key authentication, SQLAlchemy ORM, Pydantic v2 validation, Docker containerization, and automated Vercel deployment. Live in production.</p>
+            <div class="project-stack">
+              <span>FastAPI</span><span>SQLAlchemy</span><span>Pydantic</span><span>Docker</span><span>Vercel</span>
+            </div>
+          </div>
+          <a href="https://fastapi-product-catalog.vercel.app/" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </a>
+        </article>
+
+        <article class="project-item reveal">
+          <div class="project-meta">
+            <span class="project-num">04</span>
+            <span class="project-year">2024</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Bash Cloud Forge</h3>
+            <p class="project-desc">Pure Bash toolkit for lightning-fast cloud server provisioning, security hardening, monitoring setup, and API deployments across DigitalOcean, AWS, and Telegram notifications.</p>
+            <div class="project-stack">
+              <span>Bash</span><span>DigitalOcean</span><span>AWS</span><span>Telegram Bot API</span>
+            </div>
+          </div>
+          <a href="https://github.com/NyoikePaul/bash-cloud-forge" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </a>
+        </article>
+
+        <article class="project-item reveal">
+          <div class="project-meta">
+            <span class="project-num">05</span>
+            <span class="project-year">2025</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">GigFlow — Freelance Dashboard</h3>
+            <p class="project-desc">Premium freelance management dashboard built with Next.js App Router, TypeScript, Tailwind CSS v4, shadcn/ui, Zustand, and TanStack Table. Designed for Upwork freelancers.</p>
+            <div class="project-stack">
+              <span>Next.js 16</span><span>TypeScript</span><span>Tailwind v4</span><span>Zustand</span>
+            </div>
+          </div>
+          <a href="https://github.com/NyoikePaul/gigflow" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </a>
+        </article>
+
+      </div>
+
+      <div class="projects-footer reveal">
+        <a href="https://github.com/NyoikePaul" target="_blank" class="btn-ghost">View All on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== TESTIMONIALS ======================== -->
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section-label reveal" style="text-align:center">Client Trust</div>
+      <div class="testimonials-grid">
+        <div class="testimonial reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Paul delivered an exceptional FastAPI backend with impeccable documentation. He anticipated edge cases we hadn't even considered. Highly recommended."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SK</div>
+            <div>
+              <div class="author-name">Software Client</div>
+              <div class="author-role">SaaS Platform · Upwork</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The Odoo customization including M-Pesa integration transformed our billing workflow completely. Paul understood the Kenyan market inside out."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">NB</div>
+            <div>
+              <div class="author-name">Business Owner</div>
+              <div class="author-role">Real Estate · Nairobi</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Shipped our cloud infrastructure setup in 2 days. The Terraform scripts and Bash automation he built saved us weeks of manual work going forward."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">TC</div>
+            <div>
+              <div class="author-name">Tech Founder</div>
+              <div class="author-role">Startup · Remote</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CONTACT ======================== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-left reveal">
+          <div class="section-label">Get In Touch</div>
+          <h2 class="section-title">Let's Build <em>Something</em> Great.</h2>
+          <p class="contact-sub">Have a project in mind? I'm available for freelance work and long-term collaborations. Reach out and let's talk about what we can build together.</p>
+
+          <div class="contact-channels">
+            <a href="https://www.upwork.com/freelancers/~0117b7d1b005b4b7f8" target="_blank" class="contact-channel">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>
+              </div>
+              <div class="channel-info">
+                <span class="channel-name">Upwork</span>
+                <span class="channel-handle">View My Profile</span>
+              </div>
+              <span class="channel-arrow">→</span>
+            </a>
+
+            <a href="https://github.com/NyoikePaul" target="_blank" class="contact-channel">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div class="channel-info">
+                <span class="channel-name">GitHub</span>
+                <span class="channel-handle">@NyoikePaul</span>
+              </div>
+              <span class="channel-arrow">→</span>
+            </a>
+
+            <a href="mailto:paul@digifirst.com" class="contact-channel">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="channel-info">
+                <span class="channel-name">Email</span>
+                <span class="channel-handle">paul@digifirst.com</span>
+              </div>
+              <span class="channel-arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-right reveal">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="john@company.com" required>
+            </div>
+            <div class="form-group">
+              <label>Project Type</label>
+              <select>
+                <option value="">Select a service...</option>
+                <option>API Development</option>
+                <option>Odoo ERP Customization</option>
+                <option>Full-Stack Web App</option>
+                <option>Cloud & DevOps</option>
+                <option>Integrations & Automation</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Tell Me About Your Project</label>
+              <textarea rows="4" placeholder="Describe your project, timeline, and budget..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-mark">PN</span>
+          <p>Building digital infrastructure<br>that scales. Based in Nairobi.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Work</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.upwork.com/freelancers/~0117b7d1b005b4b7f8" target="_blank">Upwork</a>
+          <a href="https://github.com/NyoikePaul" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Paul Nyoike. Crafted with precision.</span>
+        <span class="footer-tech">Python · FastAPI · Odoo · React</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
