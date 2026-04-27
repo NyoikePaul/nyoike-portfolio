@@ -509,31 +509,48 @@
 
         <div class="contact-right reveal">
           <form class="contact-form" id="contactForm">
+            <!-- Web3Forms access key — replace YOUR_ACCESS_KEY with key from web3forms.com/access -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+            <input type="hidden" name="subject" value="New Project Inquiry — Paul Nyoike Portfolio">
+            <input type="hidden" name="from_name" value="Portfolio Contact Form">
+            <input type="checkbox" name="botcheck" style="display:none">
+
             <div class="form-group">
               <label>Your Name</label>
-              <input type="text" placeholder="John Smith" required>
+              <input type="text" name="name" placeholder="John Smith" required>
             </div>
             <div class="form-group">
               <label>Email Address</label>
-              <input type="email" placeholder="john@company.com" required>
+              <input type="email" name="email" placeholder="john@company.com" required>
             </div>
             <div class="form-group">
               <label>Project Type</label>
-              <select>
+              <select name="project_type" required>
                 <option value="">Select a service...</option>
                 <option>API Development</option>
                 <option>Odoo ERP Customization</option>
                 <option>Full-Stack Web App</option>
-                <option>Cloud & DevOps</option>
-                <option>Integrations & Automation</option>
+                <option>Cloud &amp; DevOps</option>
+                <option>Integrations &amp; Automation</option>
                 <option>Other</option>
               </select>
             </div>
             <div class="form-group">
               <label>Tell Me About Your Project</label>
-              <textarea rows="4" placeholder="Describe your project, timeline, and budget..."></textarea>
+              <textarea name="message" rows="4" placeholder="Describe your project, timeline, and budget..." required></textarea>
             </div>
-            <button type="submit" class="btn-primary btn-full">Send Message →</button>
+
+            <button type="submit" class="btn-primary btn-full" id="submitBtn">
+              <span id="btnText">Send Message →</span>
+              <span id="btnSpinner" style="display:none">Sending…</span>
+            </button>
+
+            <div id="formSuccess" class="form-msg form-msg--success" style="display:none">
+              ✅ Message sent! I'll get back to you within 24 hours.
+            </div>
+            <div id="formError" class="form-msg form-msg--error" style="display:none">
+              ❌ Something went wrong. Please email me directly at paul@digifirst.com
+            </div>
           </form>
         </div>
       </div>
@@ -567,5 +584,49 @@
   </footer>
 
   <script src="js/main.js"></script>
+<script>
+  // ── CONTACT FORM — Web3Forms ──────────────────────────────
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const btn      = document.getElementById('submitBtn');
+    const btnText  = document.getElementById('btnText');
+    const spinner  = document.getElementById('btnSpinner');
+    const success  = document.getElementById('formSuccess');
+    const error    = document.getElementById('formError');
+
+    // Reset state
+    success.style.display = 'none';
+    error.style.display   = 'none';
+    btn.disabled          = true;
+    btnText.style.display = 'none';
+    spinner.style.display = 'inline';
+
+    const formData = new FormData(this);
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        success.style.display = 'block';
+        this.reset();
+      } else {
+        throw new Error(data.message || 'Submission failed');
+      }
+    } catch (err) {
+      console.error(err);
+      error.style.display = 'block';
+    } finally {
+      btn.disabled          = false;
+      btnText.style.display = 'inline';
+      spinner.style.display = 'none';
+    }
+  });
+</script>
 </body>
 </html>
